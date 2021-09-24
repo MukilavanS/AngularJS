@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <title>Iterating Over Data</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body ng-init="customers=[{name:'Jai', order:'Redmi note 8', price:'13499'},{name:'Ranjith', order:'realme 7', price:'14999'},{name:'Ram', order:'realme C20', price:'8999'}]">
+    <h2>Customers</h2>
+    Filter: <input type="text" ng-model="customerFilter.name" />
+    <br /><br />
+    <table>
+        <tr>
+            <th ng-click="sortBy='name';reverse=!reverse">Name</th>
+            <th ng-click="sortBy='order';reverse=!reverse">Order</th>
+            <th ng-click="sortBy='price';reverse=!reverse">price</th>
+        </tr>
+        <tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
+            <td>{{ cust.name }}</td>
+            <td>{{ cust.order}}</td>
+            <td>{{ cust.price}}</td>
+        </tr>
+    </table>
+    <br />
+    <span>Total Customers: {{customers.length}}</span>
+
+    <script src="angular.js"></script>
+</body>
+</html>
