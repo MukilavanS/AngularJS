@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title> Directives and Expression </title>
+        <script src="angular.js"></script>
+    </head>
+    <body >
+        <div ng-hide="isHidden">
+            Name:<input type="text" ng-init="name='James'" ng-model="name" placeholder="Enter the name"/>
+            <br />
+            <h3>{{name}}</h3>
+            <br/>
+            City:<input type="text" ng-init="city='USA'" ng-model="city" placeholder="Enter the city" />
+            <br />
+            <h3> {{city}} </h3>
+        </div>
+        Hide: <input type="checkbox" ng-model="isHidden"> 
+        <br />
+        <button ng-click="name='Michelle'">Change Name</button> 
+        <button ng-click="city='London'">Change City</button>
+        <div>
+            <br />
+            Enter the numbers for addtion:<input type="number" ng-model="Number1" /> +
+            <input type="number" ng-model="Number2" /> = <span>{{Number1 +  Number2}}</span>
+        </div>
+    </body>
+</html>
