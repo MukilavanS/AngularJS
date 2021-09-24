@@ -1,0 +1,24 @@
+<html ng-app>
+<head>
+    <title>Iteration over the data</title>
+    <script src="angular.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body ng-init="PhoneDetails=[{PhoneModel:'Redmi note 8', Company:'Mi', Price:'13000'},{PhoneModel:'realme 7', Company:'Realme', Price:'14999'}]">
+        <ul>
+            <li ng-repeat="phone in PhoneDetails">{{phone.Company}} - {{phone.PhoneModel}}</li>
+        </ul>
+        <table>
+            <tr>
+                <th>Phone Model</th>
+                <th>Company</th>
+                <th>Price</th>
+            </tr>
+            <tr ng-repeat="phone in PhoneDetails">
+                <td>{{ phone.PhoneModel }}</td>
+                <td>{{ phone.Company }}</td>
+                <td>{{ phone.Price }}</td>
+            </tr>
+        </table>
+    </body>
+</html>
