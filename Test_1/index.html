@@ -1,0 +1,32 @@
+<html ng-app="testApp">
+    <head>
+        <title>Test App</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body ng-controller="testController">
+        INPUT: <input type="text" ng-model="inString" />
+        <br /><br />
+        <button type="submit" ng-click="find()">Submit</button>
+        <br /><br />
+        <div>
+            Input string:
+            <h2>{{ inString }}</h2>
+            <table>
+                <tr ng-repeat="out in ouTpuT">
+                    <td>{{ out }}</td>
+                </tr>
+            </table>
+        </div>
+        <p>&nbsp;</p>
+        <div>
+            POWER: <input type="number" ng-model="inNumber" placeholder="Enter the number"/>
+            <a>&nbsp;</a>
+            <button type="submit" ng-click="square()">Submit</button>
+            <br>
+            <h2>{{ squareOut}}</h2>
+        </div>
+        <script src="angular.js"></script>
+        <script src="App/testApp.js"></script>
+        <script src="App/Controller/testController.js"></script>
+    </body>
+</html>
